@@ -31,3 +31,22 @@ if __name__ == "__main__" :
         draw()
         pen.end_fill()
 pen.hideturtle()
+
+c=input("Enter colomn name:")
+r=int(input("Enter row number:"))
+d=['A','B','C','D','E','F','G','H','a','b','c','d','e','f','g','h']
+m=[1,2,3,4,5,6,7,8]
+
+while (c not in d) or (r not in m):
+    c=input("Re enter colomn name:")
+    r=int(input("Re enter row number:"))
+
+if (c in d) and (r in m):
+    x=d.index(c)
+    s=x+r
+    if s%2==0:
+        print("WHITE")
+    else:
+        print("BLACK")
+        
+        
