@@ -91,11 +91,25 @@ if (c in d) and (r in m):
 board = chess.Board("5r2/8/Kpk5/P5R1/8/8/8/8")
 print(board)
 
-a=input("Enter the move:")
+a=input("Black to move and Mate in 1:")
 if a=='rA8':
     print("Correct")
     board = chess.Board("r7/8/Kpk5/P5R1/8/8/8/8")
     print(board)
+else:
+    print("incorrect")
+print('')
+print('')
+board1 = chess.Board("6k1/rp3ppp/2r1b3/2P1Pp2/8/5N2/5PPP/3R2K1")
+print(board1)
+
+s=input("White to move and Mate in 1:")
+if s=='RD8':
+    print("Correct")
+    print('')
+    print('')
+    board1 = chess.Board("3R2k1/rp3ppp/2r1b3/2P1Pp2/8/5N2/5PPP/6K1")
+    print(board1)
 else:
     print("incorrect")
         
