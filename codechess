@@ -33,20 +33,58 @@ if __name__ == "__main__" :
 pen.hideturtle()
 
 c=input("Enter colomn name:")
+c=c.lower()
 r=int(input("Enter row number:"))
-d=['A','B','C','D','E','F','G','H','a','b','c','d','e','f','g','h']
+d=['a','b','c','d','e','f','g','h']
 m=[1,2,3,4,5,6,7,8]
+
+def Rook():
+    print("Rook")
+    print("Rook is a piece which moves either vertically or horizontally only")
+
+def Knight():
+    print("Knight")
+    print("A tricky piece in chess which moves in L shape pattern.")
+
+def Bishop():
+    print("Bishop")
+    print("A bishop only moves diagonally.")
+    print("A white square bishop only moves in white squares and vice versa")
+
+def Queen():
+    print("Queen")
+    print("The most powerful piece on board")
+    print("It can move diagonally,vertically and horizontally")
+
+def King():
+    print("King")
+    print("The most important piece in the game which only moves one square")
+
+def Pawn():
+    print("Pawn")
+    print("It initially moves one or two spaces forward and captures diagonally.")
+
 
 while (c not in d) or (r not in m):
     c=input("Re enter colomn name:")
+    c=c.lower()
     r=int(input("Re enter row number:"))
 
 if (c in d) and (r in m):
-    x=d.index(c)
-    s=x+r
-    if s%2==0:
-        print("WHITE")
+    if r==1 or r==8:
+        if c=='a' or 'h':
+            Rook()
+        elif c=='b' or 'g':
+            Knight()
+        elif c=='c' or 'f':
+            Bishop()
+        elif c=='d':
+            Queen()
+        else:
+            King()
+    elif r==2 or r==7:
+        Pawn()
     else:
-        print("BLACK")
+        print("Empty square")
         
         
